@@ -56,21 +56,21 @@ def err_A (s, l):
 def err_B (s, l):
   A = s.split()
   if (len(A) != 3):
-    syntax_error(l)
+    err_syntax(l)
   flag_reg_check(A[1], l)
   imm_check(A[2], l)
 
 def err_C (s, l):
   A = s.split()
   if (len(A) != 3):
-    syntax_error(l)
+    err_syntax(l)
   for i in range(1, 3):
     flag_reg_check(A[i], l)
 
 def err_D (s, l):
   A = s.split()
   if (len(A) != 3):
-    syntax_error(l)
+    err_syntax(l)
   flag_reg_check(A[1], l)
   var_check(A[2], l)
 
@@ -212,6 +212,10 @@ def err_hlt():
   print("Incorrect usage of halt statement!")
   sys.exit()
 
+def err_var(l):
+  print("Incorrect usage of variable! Line # = ", l)
+  sys.exit()
+
 def hlt_check():
   hlts = 0
   for i in inp:
@@ -250,7 +254,7 @@ def _dicts():
   while (i < n):
     A = inp[i].split()
     if (A[0] == "var"):
-      err_var()
+      err_var(i + 1)
     if (A[0][-1] == ":" and A[0][0:-1].isalnum()):
       label[A[0][:-1]] = format(j, '08b')
     i += 1

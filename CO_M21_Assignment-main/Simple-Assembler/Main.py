@@ -98,11 +98,11 @@ def err_reg (l):
   sys.exit()
 
 def err_no_variable (l):
-  print("No such variable! Line # = ", l)
+  print("Undefined variable! Line # = ", l)
   sys.exit()
 
 def err_imm (l):
-  print("Error in immutable value! Line # = ", l)
+  print("Immutable value out of range! Line # = ", l)
   sys.exit()
 
 def err_label_mem_add (l):

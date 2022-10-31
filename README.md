@@ -1,6 +1,6 @@
 A python based assembler and simulator for course [CSE112 - Computer Organization](http://techtree.iiitd.edu.in/viewDescription/filename?=CSE112)
 
-Boiler plate code for testing from [GitHub Link](https://github.com/Setu-Gupta/CO_M21_Assignment)
+Code for testing from [GitHub Link](https://github.com/Setu-Gupta/CO_M21_Assignment)
 
 # Instruction Set Architecture
 
